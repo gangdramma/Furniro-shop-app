@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 import { useParams } from "react-router-dom";
+import Loader from "../../components/loader";
 import * as Api from "../../modules/products/api";
 import * as Mapper from "../../modules/products/mappers";
 import * as Types from "../../modules/products/types";
@@ -26,7 +27,7 @@ const Single = () => {
   }, [productId]);
 
   if (!product) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   return (
