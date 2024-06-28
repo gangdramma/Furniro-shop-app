@@ -5,6 +5,7 @@ import Loader from "../../components/loader";
 import * as Api from "../../modules/products/api";
 import * as Mapper from "../../modules/products/mappers";
 import * as Types from "../../modules/products/types";
+import "../../assets/styles/products.scss";
 
 const Products = () => {
   const [products, setProducts] = useState<Types.IEntity.IProduct[]>([]);
@@ -34,7 +35,7 @@ const Products = () => {
     return products.map((product) => (
       <li key={product.id}>
         <Link to={`/products/${product.id}`}>
-          <img src={product.thumbnail} alt="" />
+          <img src={product.images[0]} alt="" />
         </Link>
         <h2>{product.title}</h2>
       </li>
