@@ -34,10 +34,12 @@ const Main: React.FC = () => {
             <img
               src={product.images[0]}
               alt={product.title}
-              className="thumbnail"
+              className="carousel-image"
             />
-            <h3>{product.title}</h3>
-            <p>${product.price}</p>
+            {/* <div className="product-info">
+              <h3>{product.title}</h3>
+              <p>${product.price}</p>
+            </div> */}
           </div>
         ))}
       </Carousel>

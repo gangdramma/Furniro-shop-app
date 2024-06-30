@@ -1,8 +1,10 @@
 import axios, { AxiosError } from "axios";
 import toast from "react-hot-toast";
-import { session } from "./session";
+import { session } from "../../service/session";
 
-export const http = axios.create({ baseURL: "https://dummyjson.com" });
+export const http = axios.create({
+  baseURL: "https://limitless-peak-31978-868db4faa179.herokuapp.com",
+});
 
 http.interceptors.request.use((request) => {
   const token = session.get();
