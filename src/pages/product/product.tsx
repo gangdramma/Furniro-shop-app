@@ -19,7 +19,6 @@ const Products = () => {
         Mapper.mapProduct(item)
       );
       setProducts(mappedProducts);
-      console.log(response.data);
     } catch (error) {
       toast.error("Failed to fetch products");
     } finally {

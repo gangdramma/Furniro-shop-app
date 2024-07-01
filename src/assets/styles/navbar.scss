@@ -1,0 +1,268 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 90px;
+  padding-right: 90px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgb(216, 216, 216);
+
+  .nav-logo {
+    cursor: pointer;
+  }
+
+  .nav-elements {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48.5px;
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 64px;
+
+      li {
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 27px;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        text-align: left;
+        cursor: pointer;
+
+        &:hover {
+          border-bottom: 2px solid #a18a68;
+        }
+      }
+
+      .user-infos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .line-nav {
+      color: rgb(112, 112, 112);
+    }
+
+    .nav-auth {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 39px;
+
+      .burger {
+        display: none;
+      }
+
+      svg {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .nav {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .nav-elements {
+      gap: 48.5px;
+
+      .nav-links {
+        gap: 64px;
+
+        li {
+          &:hover {
+            border-bottom: 2px solid #a18a68;
+          }
+        }
+
+        .user-infos {
+          gap: 7px;
+
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .line-nav {
+        color: rgb(112, 112, 112);
+      }
+
+      .nav-auth {
+        gap: 39px;
+
+        svg {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .nav {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .nav-elements {
+      gap: 25px;
+
+      .nav-links {
+        gap: 30px;
+
+        li {
+          &:hover {
+            border-bottom: 2px solid #a18a68;
+          }
+        }
+
+        .user-infos {
+          gap: 7px;
+
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .line-nav {
+        color: rgb(112, 112, 112);
+      }
+
+      .nav-auth {
+        gap: 30px;
+
+        svg {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .nav {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .nav-elements {
+      gap: 25px;
+
+      .nav-links {
+        display: none;
+      }
+
+      .line-nav {
+        display: none;
+      }
+
+      .nav-auth {
+        gap: 30px;
+
+        .burger {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          cursor: pointer;
+          gap: 5px;
+
+          .line {
+            width: 30px;
+            height: 3px;
+            background-color: black;
+          }
+        }
+
+        svg {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  .modal-content {
+    background-color: white;
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    .close-button {
+      background: none;
+      border: none;
+      font-size: 34px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    .modal-links {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 10px 0;
+        cursor: pointer;
+        font-size: 18px;
+
+        &:hover {
+          color: #a18a68;
+        }
+      }
+
+      .user-infos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

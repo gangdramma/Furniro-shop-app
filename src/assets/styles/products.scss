@@ -1,5 +1,41 @@
+// Initial styles
 img {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 400px;
   object-fit: cover;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+li {
+  list-style-type: none;
+  flex: 1 1 calc(33.333% - 16px); // Three items per row
+  max-width: calc(33.333% - 16px);
+}
+
+// Media queries for responsiveness
+@media screen and (max-width: 1200px) {
+  li {
+    flex: 1 1 calc(50% - 16px); // Two items per row
+    max-width: calc(50% - 16px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  li {
+    flex: 1 1 calc(100% - 16px); // One item per row
+    max-width: calc(100% - 16px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  img {
+    width: 100%;
+    height: auto;
+  }
 }

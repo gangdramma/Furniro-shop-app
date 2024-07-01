@@ -31,7 +31,7 @@ const Register: React.FC = () => {
   const [rememberMe, setRememberMe] = useState(false);
   const navigator = useNavigate();
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [avatarPreview, setAvatarPreview] = useState<string | null>(null); // State for avatar preview
+  const [avatarPreview, setAvatarPreview] = useState<string | null>(null);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -62,7 +62,6 @@ const Register: React.FC = () => {
         avatar: file,
       });
 
-      // Generate a preview URL for the selected avatar
       const reader = new FileReader();
       reader.onloadend = () => {
         setAvatarPreview(reader.result as string);
@@ -72,7 +71,6 @@ const Register: React.FC = () => {
   };
 
   const handleAvatarClick = () => {
-    // Programmatically trigger the file input when the avatar area is clicked
     const fileInput = document.getElementById("avatar");
     if (fileInput) {
       fileInput.click();
@@ -110,7 +108,7 @@ const Register: React.FC = () => {
         password: "",
         avatar: null,
       });
-      setAvatarPreview(null); // Clear avatar preview after successful registration
+      setAvatarPreview(null);
     } catch (error: any) {
       if (error instanceof Yup.ValidationError) {
         const yupErrors: { [key: string]: string } = {};
