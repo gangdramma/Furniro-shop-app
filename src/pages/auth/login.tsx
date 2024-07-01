@@ -114,7 +114,7 @@ const Login: React.FC = () => {
           <div style={{ color: "red" }}>{errors.email}</div>
         )}
       </div>
-      <div className="">
+      <div className="auth-input-box">
         <input
           name="password"
           type="password"
