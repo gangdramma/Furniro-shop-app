@@ -141,7 +141,9 @@ const Register: React.FC = () => {
     email: Yup.string()
       .email("Неверный формат email адреса")
       .required("Поле email обязательно для заполнения"),
-    password: Yup.string().required("Поле пароль обязательно для заполнения"),
+    password: Yup.string()
+      .required("Поле пароль обязательно для заполнения")
+      .min(8, "Пароль должен быть не менее 8 символов"),
   });
 
   return (
